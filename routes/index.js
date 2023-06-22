@@ -1,7 +1,9 @@
 import express from "express";
 // TODO: import router from users.route
 import userRouter from "./users.route.js";
+import employeeRouter from "./employees.route.js";
 
+router.use("/employees", employeeRouter);
 const router = express.Router();
 
 router.get("/test", (req, res) => {
