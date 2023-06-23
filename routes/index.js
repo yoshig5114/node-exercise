@@ -3,8 +3,8 @@ import express from "express";
 import userRouter from "./users.route.js";
 import employeeRouter from "./employees.route.js";
 
-router.use("/employees", employeeRouter);
 const router = express.Router();
+router.use("/employees", employeeRouter);
 
 router.get("/test", (req, res) => {
   res.send("working");
