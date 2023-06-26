@@ -1,5 +1,5 @@
 
-import query from "../db/utils";
+import query from "../db/utils.js";
 
 const findAll = async () => {
   return query("SELECT ProductID, Name, Price, CategoryID, OnSale, StockLevel FROM products");
@@ -11,14 +11,14 @@ const findOne = async (id) => {
   ]);
 };
 
-const addOne = async (product) => {
-  return await query("INSERT INTO products SET ?", [product]);
+const addOne = async (products) => {
+  return await query("INSERT INTO products SET ?", [products]);
 }
 
-const updateOne = async (id, product) => {
+const updateOne = async (id, products) => {
   return await query("UPDATE products SET ? WHERE ProductID = ?", [
-    product,
-     product.ProductID
+    products,
+     products.ProductID
     ]);
 }
 
