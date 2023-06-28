@@ -18,7 +18,7 @@ const addOne = async (products) => {
 const updateOne = async (id, products) => {
   return await query("UPDATE products SET ? WHERE ProductID = ?", [
     products,
-     products.ProductID
+    id
     ]);
 }
 
